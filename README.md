@@ -18,25 +18,27 @@ import { useClickOutside } from 'use-click-outside-simple';
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef(null);
 
   useClickOutside(modalRef, () => {
     setIsOpen(false);
   });
 
   return (
-    <div>
+    <div style={{ padding: '50px' }}>
       <button onClick={() => setIsOpen(true)}>Open Modal</button>
-      
+
       {isOpen && (
-        <div ref={modalRef} style={{ border: '1px solid black', padding: '20px' }}>
+        <div ref={modalRef} style={{ border: '1px solid black', padding: '20px', marginTop: '20px' }}>
           <h1>Modal Content</h1>
           <p>Click outside this box to close it.</p>
         </div>
       )}
     </div>
-  );
+  )
 };
+
+export default App;
 ```
 
 ## API
