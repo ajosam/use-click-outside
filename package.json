@@ -7,7 +7,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsup src/index.ts --format cjs,esm --dts",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "vitest"
     },
     "keywords": [
         "react",
@@ -22,12 +22,16 @@
     },
     "devDependencies": {
         "@swc/core": "^1.15.3",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.0",
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
+        "jsdom": "^27.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tsup": "^8.0.0",
-        "typescript": "^5.0.0"
+        "typescript": "^5.0.0",
+        "vitest": "^4.0.15"
     },
     "files": [
         "dist"
